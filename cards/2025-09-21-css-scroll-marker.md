@@ -9,9 +9,9 @@ author: instructor
 
 # CSS ::scroll-marker Pseudo-Element
 
-The `::scroll-marker` pseudo-element is a cutting-edge CSS feature that styles scroll position indicators without JavaScript. It targets marker elements automatically generated for scrollable containers, enabling custom scroll progress visualization. **Key benefit**: Pure CSS scroll indicators that update automatically as users scroll, eliminating the need for scroll event listeners and manual DOM updates.
+The `::scroll-marker` pseudo-element is a cutting-edge CSS feature that styles scroll position indicators without JavaScript. It targets marker elements automatically generated for scrollable containers.
 
-This pseudo-element works in conjunction with the `scroll-marker-group` property on containers. When applied, it generates visual markers for each scrollable section or snap point. The markers automatically highlight based on scroll position, providing intuitive navigation feedback. Think of it as built-in scroll-spy functionality without the performance overhead of JavaScript observers.
+This pseudo-element works in conjunction with the `scroll-marker-group` property on containers. When applied, it generates visual markers for each scrollable section or snap point. The markers automatically update as the user scrolls.
 
 ## Example
 
@@ -53,8 +53,8 @@ nav::scroll-marker {
 
 ## When to Use
 
-Use `::scroll-marker` for image carousels, section-based navigation, reading progress indicators, or any scrollable interface needing position feedback. 
-Perfect for creating accessible scroll indicators that work without JavaScript. Currently experimental (2024+) with 
-limited browser support—check compatibility and provide JavaScript fallbacks for production use.
+Use `::scroll-marker` for image carousels, section-based navigation, reading progress indicators, or any scrollable interface needing position feedback.
+
+Perfect for creating accessible scroll indicators that work without JavaScript. Currently experimental (2024+) with limited browser support—check compatibility and provide JavaScript fallbacks for production use.
 
 **Source**: [MDN: ::scroll-marker](https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker)
