@@ -2,9 +2,9 @@
 
 ## Card Details
 
-- **Topic**:
-- **Category**:
-- **Issue #**:
+- **Topic**: 
+- **Category**: 
+- **Issue #**: 
 
 ## Submission Checklist
 
