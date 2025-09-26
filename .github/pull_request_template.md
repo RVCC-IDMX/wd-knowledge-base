@@ -10,16 +10,16 @@
 
 ### Required Elements
 
-- [x] File naming follows convention: `YYYY-MM-DD-descriptive-name.md`
-- [x] All frontmatter fields are complete
-- [x] Explanation is between 75-250 words
-- [x] Code example included and tested (if applicable)
-- [x] "When to use" section included
+- [ ] File naming follows convention: `YYYY-MM-DD-descriptive-name.md`
+- [ ] All frontmatter fields are complete
+- [ ] Explanation is between 75-250 words
+- [ ] Code example included and tested (if applicable)
+- [ ] "When to use" section included
 
 ### Source & Quality
 
-- [x] Source is from approved list (MDN, web.dev, Chrome DevTools, W3C, WHATWG, A11Y Project, WebAIM, Can I Use)
-- [x] Source link works
+- [ ] Source is from approved list (MDN, web.dev, Chrome DevTools, W3C, WHATWG, A11Y Project, WebAIM, Can I Use)
+- [ ] Source link works
 - [ ] No spelling or grammar errors
 - [ ] Passes markdownlint check
 - [ ] Code example works correctly
