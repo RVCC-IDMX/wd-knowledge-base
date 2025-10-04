@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src:
+    local("Pixelify Sans"),
+    url(PixelifySans-Regular.ttf);
+}
+
+body {
+  font-family: "Pixelify Sans", serif;
+  font-size: 48px;
+  text-align: center;
+}
