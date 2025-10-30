@@ -1,5 +1,5 @@
 ---
-title: Variable Fonts - Dynamic Typography with Font Variations
+title: "Variable Fonts - Dynamic Typography with Font Variations"
 date: 2025-10-30
 category: typography
 difficulty: intermediate
