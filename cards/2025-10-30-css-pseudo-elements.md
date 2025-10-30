@@ -19,6 +19,11 @@ These pseudo-elements don't appear in the DOM but are treated as child elements 
 
 ```css
 /* Add decorative quotes around blockquotes */
+blockquote {
+  position: relative;
+  padding: 20px 20px 20px 40px;
+}
+
 blockquote::before {
   content: """;
   font-size: 3em;
@@ -32,6 +37,9 @@ blockquote::after {
   content: """;
   font-size: 3em;
   color: #ccc;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
 }
 
 /* Style list markers */
