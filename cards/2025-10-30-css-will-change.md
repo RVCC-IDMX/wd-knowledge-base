@@ -9,9 +9,9 @@ author: curban2336
 
 # CSS will-change: Optimizing Animations and Transitions
 
-The `will-change` property hints to browsers which CSS properties will animate, allowing them to optimize rendering in advance. By creating separate compositing layers for elements, browsers can offload animation processing to the GPU, resulting in smoother 60fps performance. However, overuse causes memory overhead—browsers allocate resources for optimization even when animations aren't running.
+The `will-change` property hints to browsers which CSS properties will animate, allowing them to optimize rendering in advance. By creating separate compositing layers for elements, browsers can offload animation processing to the GPU, resulting in smoother 60 fps performance. However, overuse causes memory overhead—browsers allocate resources for optimization even when animations aren't running.
 
-Best practice: add `will-change` just before animation starts (via JavaScript or hover's parent), and remove it afterward. Never apply `will-change` to many elements simultaneously or leave it permanently in CSS. Common optimized properties include `transform`, `opacity`, and `filter`. Modern browsers already optimize these without hints in most cases, so only use `will-change` when profiling reveals jank.
+Best practice: add `will-change` just before animation starts (via JavaScript or parent hover state), and remove it afterward. Never apply `will-change` to many elements simultaneously or leave it permanently in CSS. Common optimized properties include `transform`, `opacity`, and `filter`. Modern browsers already optimize these without hints in most cases, so only use `will-change` when profiling reveals jank.
 
 Critical caveat: `will-change` creates a new stacking context, which can break z-index behavior. Test thoroughly when applying to complex layouts. For legacy browsers, it's safely ignored, making it a progressive enhancement rather than a requirement.
 
@@ -60,6 +60,11 @@ menuItems.forEach(item => {
   
   // Remove after animation completes
   item.addEventListener('transitionend', () => {
+    item.style.willChange = 'auto';
+  });
+  
+  // Also remove if user leaves before transition completes
+  item.addEventListener('mouseleave', () => {
     item.style.willChange = 'auto';
   });
 });
