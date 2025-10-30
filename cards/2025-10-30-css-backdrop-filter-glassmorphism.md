@@ -9,9 +9,9 @@ author: Emily Lubonty
 
 # CSS backdrop-filter: Glassmorphism and Background Effects
 
-The `backdrop-filter` property applies visual effects like blur and color shifts to the area behind an element, creating the popular glassmorphism design trend. Unlike the `filter` property which affects the element itself, `backdrop-filter` only affects what's visible through the element's background. This creates a frosted glass effect where background content appears blurred and tinted while foreground content remains sharp. Common functions include `blur()`, `brightness()`, `contrast()`, and `saturate()`. The element needs a semi-transparent background for the effect to be visible.
+The `backdrop-filter` property applies visual effects to the area behind an element, creating the glassmorphism design trend. Unlike `filter`, which affects the element itself, `backdrop-filter` affects only what's visible through the element's background, creating a frosted glass effect. Common functions include `blur()`, `brightness()`, `contrast()`, and `saturate()`. The element requires a semi-transparent background for the effect to be visible.
 
-Glassmorphism combines `backdrop-filter: blur()` with semi-transparent backgrounds, subtle borders, and shadows to create depth and hierarchy. This technique works best on elements overlaying colorful or complex backgrounds. Performance is GPU-accelerated but can be expensive on low-end devices, so use sparingly on critical UI elements. Browser support is excellent in modern browsers, though older versions may require fallbacks.
+Glassmorphism combines `backdrop-filter: blur()` with semi-transparent backgrounds, subtle borders, and shadows to create depth and hierarchy. This technique works best on elements overlaying colorful backgrounds. Performance is GPU-accelerated but can be expensive on low-end devices, so use sparingly. Modern browsers support it well.
 
 ## Example
 
@@ -43,6 +43,6 @@ Glassmorphism combines `backdrop-filter: blur()` with semi-transparent backgroun
 
 ## When to Use
 
-Use backdrop-filter for navigation bars, modals, cards, and popovers that overlay dynamic content. It creates visual separation and hierarchy while maintaining context of underlying content. Ideal for modern app interfaces, hero sections, and content overlays where the background adds visual interest. Avoid on low-end devices or when the element covers static, non-distracting backgrounds where transparency provides minimal benefit.
+Use backdrop-filter for navigation bars, modals, cards, and popovers overlaying dynamic content. It creates visual separation while maintaining context. Ideal for modern app interfaces and hero sections where the background adds visual interest. Avoid on low-end devices or over static backgrounds.
 
 **Source**: [MDN: backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
