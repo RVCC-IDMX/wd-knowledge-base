@@ -11,7 +11,7 @@ author: Emily Lubonty
 
 Variable fonts revolutionize web typography by packaging multiple font styles into a single file. Instead of loading separate files for bold, italic, or different weights, variable fonts use variation axes like weight (wght), width (wdth), slant, and optical size (opsz) to create infinite typographic variations. This dramatically reduces HTTP requests and file sizes while enabling fluid, responsive typography.
 
-The `font-variation-settings` property provides low-level control over custom axes, while high-level properties like `font-weight` work seamlessly with variable fonts. Browser support is excellent (95%+), making variable fonts production-ready for modern web projects.
+The `font-variation-settings` property provides low-level control over custom axes, while high-level properties like `font-weight` work seamlessly with variable fonts. Browser support is excellent across modern browsers (Chrome 62+, Firefox 62+, Safari 11+, Edge 79+), making variable fonts production-ready for modern web projects.
 
 Key benefits include performance optimization through reduced file sizes, design flexibility with fine-grained control over typography, and animation capabilities for creative effects. Variable fonts support both standard registered axes (weight, width, slant, italic, optical-size) and custom axes defined by font designers.
 
@@ -50,16 +50,22 @@ Key benefits include performance optimization through reduced file sizes, design
   animation: weight-shift 3s ease-in-out infinite;
 }
 
-/* Responsive typography with variable fonts */
+/* Responsive typography with container queries */
 .responsive-heading {
   font-family: 'InterVariable', sans-serif;
-  /* Fluid weight based on viewport */
-  font-weight: clamp(400, 40vw, 900);
+  /* Adjust weight based on available space */
+  font-weight: 400;
+}
+
+@container (min-width: 600px) {
+  .responsive-heading {
+    font-weight: 700;
+  }
 }
 ```
 
 ## When to Use
 
-Use variable fonts when you need multiple font weights or styles across your design system. They're ideal for responsive typography that adapts to screen size, interactive animations, and performance-critical sites. Variable fonts excel in design systems requiring fine-tuned typographic control. Avoid them only if you need just one or two specific weights, where traditional static fonts might be smaller.
+Use variable fonts when you need multiple font weights or styles across your design system. They're ideal for responsive typography that adapts to screen size, interactive animations, and performance-critical sites. Variable fonts excel in design systems requiring fine-tuned typographic control. Avoid them only if you need just one or two specific weights, where traditional static fonts may be more efficient.
 
 **Source**: [MDN: Variable Fonts Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
