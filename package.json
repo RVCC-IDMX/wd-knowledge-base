@@ -4,8 +4,8 @@
   "description": "Collaborative note cards repository for Web Development II",
   "main": "index.js",
   "scripts": {
-    "validate": "./scripts/validate-card.sh",
-    "validate:all": "./scripts/validate-card.sh cards/*.md",
+    "validate": "bash ./scripts/validate-card.sh",
+    "validate:all": "bash ./scripts/validate-card.sh cards/*.md",
     "lint:md": "markdownlint *.md cards/*.md .github/*.md",
     "lint:md:fix": "markdownlint --fix *.md cards/*.md .github/*.md",
     "test": "echo \"Error: no test specified\" && exit 1"
